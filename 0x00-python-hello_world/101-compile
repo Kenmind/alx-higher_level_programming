@@ -1,0 +1,3 @@
+#!/bin/bash
+python3 -m py_compile $SPYFILE
+cp __pycache__/*.pyc $SPYFILE"c"
