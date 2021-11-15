@@ -1,3 +1,2 @@
 #!/bin/bash
-python3 -m py_compile $SPYFILE
-cp __pycache__/*.pyc $SPYFILE"c"
+python3 -c "import py_compile; py_compile.compile('$SPYFILE', '$SPYFILE' + 'c')"
