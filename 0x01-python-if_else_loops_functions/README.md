@@ -1,0 +1,92 @@
+__ALX HIGHER LEVEL PROGRAMMING__
+
+_0x01-Python-If_Else_Loops_Functions_
+
+# QUESTIONS
+
+## MANDATORY
+
+### 0. Positive anything is better than negative nothing
+This program will assign a random number to the variable _number_ each time it is executed. Complete the source code in order to print whether the number stored in the variable _number_ is positive or negative.
+
+### 1. The last digit
+This program will assign a random signed number to the variable _number_ each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable _number_.
+
+### 2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
+Write a program that prints the ASCII alphabet in lowercase, not followed by a new line.
+
+### 3. When I was having that alphabet soup, I never thought that it would pay off
+Write a program that prints the ASCII alphabet in lowercases, not followed by a new line.
+* Print all the letters except _q_ and _e_.
+
+### 4. Hexadecimal printing
+Write a program that prints all numbers from _0_ to _98_ in decimal and in hexadecimal.
+
+### 5. 00...99
+Write a program that prints numbers from _0_ to _99_.
+
+### 6. Inventing is a combination of brains and materials. The more brains you use, the less material you need 
+Write a program that prints all possible different combinations of two digits.
+
+### 7. islower
+Write a function that checks for lowercase character.
+
+### 8. To uppercase
+Write a function that prints a string in uppercase followed by a new line.
+
+### 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
+Write a function that prints the last digit of a number.
+
+### 10. a + b
+Write a function that adds two integers and returns the result.
+
+### 11. a ^ b
+Write a function that computes _a_ to the power of _b_ and return the value.
+
+### 12. Fizz Buzz
+Write a function that prints the numbers from 1 to 100 seperated by a space.
+* For multiples of three print _Fizz_ instead of the number and for multiples of five print _Buzz_.
+* For numbers which are multiples of both three and five print _FizzBuzz_.
+
+### 13. Insert in sorted linked list
+**Technical interview preperation**:
+* You are not allowed to google anything
+* Whiteboard first
+Write a function in C that inserts a number into a sorted singly linked list.
+
+## ADVANCED
+
+### 14. Smile in the mirror
+Write a program that prints the ASCII alphabet in reverse order, alternating lowercase and uppercase (_z_ in lowercase and _Y_ in uppercase), not followed by a new line.
+
+### 15. Remove that position
+Write a function that creates a copy of the string, removing the character at the position _n_ (not the Python way, the “C array index”).
+
+### 16. ByteCode -> Python #2
+Write the Python function _def magic_calculation(a, b, c):_ that does exactly the same as the following Python bytecode:
+```
+  3           0 LOAD_FAST                0 (a)
+              3 LOAD_FAST                1 (b)
+              6 COMPARE_OP               0 (<)
+              9 POP_JUMP_IF_FALSE       16
+
+  4          12 LOAD_FAST                2 (c)
+             15 RETURN_VALUE
+
+  5     >>   16 LOAD_FAST                2 (c)
+             19 LOAD_FAST                1 (b)
+             22 COMPARE_OP               4 (>)
+             25 POP_JUMP_IF_FALSE       36
+
+  6          28 LOAD_FAST                0 (a)
+             31 LOAD_FAST                1 (b)
+             34 BINARY_ADD
+             35 RETURN_VALUE
+
+  7     >>   36 LOAD_FAST                0 (a)
+             39 LOAD_FAST                1 (b)
+             42 BINARY_MULTIPLY
+             43 LOAD_FAST                2 (c)
+             46 BINARY_SUBTRACT
+             47 RETURN_VALUE
+```
