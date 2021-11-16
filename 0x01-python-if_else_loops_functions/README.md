@@ -51,7 +51,7 @@ Write a function that prints the numbers from 1 to 100 seperated by a space.
 ### 13. Insert in sorted linked list
 **Technical interview preperation**:
 * You are not allowed to google anything
-* Whiteboard first
+* Whiteboard first\
 Write a function in C that inserts a number into a sorted singly linked list.
 
 ## ADVANCED
