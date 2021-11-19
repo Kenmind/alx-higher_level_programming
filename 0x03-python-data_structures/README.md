@@ -146,7 +146,7 @@ Since we now know a bit of C, we can look at what is happening under the hood of
 
 *    All your files will be interpreted/compiled on Ubuntu 14.04 LTS \
 
- ![AWW YEAH!](ad.gif "AWW YEAH!") \
+
 
 Create a C function that prints some basic info about Python lists.
 
@@ -156,10 +156,10 @@ Create a C function that prints some basic info about Python lists.
 *    Your shared library will be compiled with this command line: *gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c*
 *    OS: *Ubuntu 14.04 LTS*
 *    Start by reading:
-*	listobject.h
-*	object.h
-*	[Common Object Structures](https://docs.python.org/3.4/c-api/structures.html)
-*	[List Objects](https://docs.python.org/3.4/c-api/list.html)
+	*	listobject.h
+	*	object.h
+	*	[Common Object Structures](https://docs.python.org/3.4/c-api/structures.html)
+	*	[List Objects](https://docs.python.org/3.4/c-api/list.html)
 ```
 julien@ubuntu:~/CPython$ gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
 julien@ubuntu:~/CPython$ cat 100-test_lists.py 
