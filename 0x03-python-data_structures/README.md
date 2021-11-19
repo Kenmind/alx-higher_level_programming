@@ -144,9 +144,9 @@ Write a function in C that checks if a singly linked list is a palindrome.
 CPython is the reference implementation of the Python programming language. Written in C, CPython is the default and most widely used implementation of the language.\
 Since we now know a bit of C, we can look at what is happening under the hood of Python. Let’s have fun with Python and C, and let’s look at what makes Python so easy to use.
 
-*    All your files will be interpreted/compiled on Ubuntu 14.04 LTS\
+*    All your files will be interpreted/compiled on Ubuntu 14.04 LTS \
 
- ![AWW YEAH!](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/7e7834b535261d05532fb80a9304f7051c4ad7ac.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20211119%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211119T065018Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=7d2f9d8917f433b3ee6f0bee4f557e4f4741fbbea0fe71fe4c3a7cad67438617 "AWW YEAH!")\
+ ![AWW YEAH!](ad.gif "AWW YEAH!") \
 
 Create a C function that prints some basic info about Python lists.
 
@@ -156,10 +156,10 @@ Create a C function that prints some basic info about Python lists.
 *    Your shared library will be compiled with this command line: *gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c*
 *    OS: *Ubuntu 14.04 LTS*
 *    Start by reading:
-*		listobject.h
-*		object.h
-*		[Common Object Structures](https://docs.python.org/3.4/c-api/structures.html)
-*		[List Objects](https://docs.python.org/3.4/c-api/list.html)
+*	listobject.h
+*	object.h
+*	[Common Object Structures](https://docs.python.org/3.4/c-api/structures.html)
+*	[List Objects](https://docs.python.org/3.4/c-api/list.html)
 ```
 julien@ubuntu:~/CPython$ gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c
 julien@ubuntu:~/CPython$ cat 100-test_lists.py 
