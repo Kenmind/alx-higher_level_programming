@@ -4,9 +4,6 @@
 #include <listobject.h>
 #include <stdio.h>
 
-#define GET PyList_GetItem
-#define SIZE Py_SIZE
-
 /**
  * print_hexn - prints hex integer
  * @str: string
@@ -67,12 +64,12 @@ void print_python_list(PyObject *p)
 	list = (PylistListObject *) p;
 
 	printf("[*] Python list info\n")
-	printf("[*] Size of the Python List = %d\n", (int) SIZE(list));
+	printf("[*] Size of the Python List = %d\n", (int) Py_SIZE(list));
 	printf("[*] Allocated = %d\n", (int) list->allocated);
 
-	for (index = 0; index < SIZE(list); index++)
+	for (index = 0; index < Py_SIZE(list); index++)
 	{
-		item = GET(p, index);
+		item = PyList_GetItem(p, index);
 		if (item != NULL)
 			printf("Element %d: %s\n", (int) index, item->ob_type->tp_name);
 	}
