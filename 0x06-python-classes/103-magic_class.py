@@ -3,7 +3,7 @@
 import math
 
 
-class _MagicClass:
+class MagicClass:
     """Magic mensulation"""
     def __init__(self, radius=0):
         """initialization of magic mensulation
