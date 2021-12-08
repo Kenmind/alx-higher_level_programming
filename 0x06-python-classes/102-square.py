@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""returns the square comparison"""
 
 
 class Square:
@@ -11,6 +12,15 @@ class Square:
 
         """
         self.size = size
+
+    def area(self):
+        """Gets the area of the Square.
+
+        Returns:
+            Area of squre
+
+        """
+        return self.__size * self.__size
 
     @property
     def size(self):
@@ -28,13 +38,9 @@ class Square:
         """
         if not isinstance(value, int) and not isinstance(value, float):
             raise TypeError("size must be a number")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    def area(self):
-        """Returns the area of the square"""
-        return self.__size * self.__size
 
     def __eq__(self, square):
         """Implements equals"""
