@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """magic class"""
+import math
 
 
 class _MagicClass:
     """Magic mensulation"""
-    def __init__(self):
+    def __init__(self, radius=0):
         """initialization of magic mensulation
         Args:
             __radius: Radius of the circle
