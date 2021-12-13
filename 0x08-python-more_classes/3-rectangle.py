@@ -52,10 +52,10 @@ class Rectangle:
         """prints the rectangle"""
         if self.width == 0 and self.height == 0:
             return ""
-        new = []
-        for i in range(self.height):
+        new = ''
+        for i in range(self.height - 1):
             for j in range(self.width):
-                new.append('#')
-            if i != self.height - 1:
-                new.append("\n")
-        return "".join(new)
+                new += '#'
+            new += '\n'
+        new += '#' * self.width
+        return new
