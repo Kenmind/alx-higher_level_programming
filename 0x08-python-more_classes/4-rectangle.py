@@ -49,7 +49,7 @@ class Rectangle:
             return (self.__width + self.__height) * 2
 
     def __str__(self):
-        """prints the rectangle"""
+        """Prints the rectangle"""
         if self.__width == 0 and self.__height == 0:
             return ""
         new = []
@@ -59,3 +59,9 @@ class Rectangle:
             if i != self.__height - 1:
                 new.append("\n")
         return "".join(new)
+
+    def __repr__(self):
+        """Returns the rectangle stringly represented"""
+        new = "Rectangle(" + str(self.__width)
+        new += ", " + str(self.__height) + ")"
+        return new
