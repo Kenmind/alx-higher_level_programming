@@ -6,8 +6,8 @@ class Rectangle:
     """Defines private instance attribute"""
     def __init__(self, width=0, height=0):
         """Instantiates the class"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -50,12 +50,12 @@ class Rectangle:
 
     def __str__(self):
         """prints the rectangle"""
-        if self.__width == 0 and self.__height == 0:
+        if self.width == 0 and self.height == 0:
             return ""
         new = []
-        for i in range(self.__height):
-            for j in range(self.__width):
+        for i in range(self.height):
+            for j in range(self.width):
                 new.append('#')
-            if i != self.__height - 1:
+            if i != self.height - 1:
                 new.append("\n")
         return "".join(new)
