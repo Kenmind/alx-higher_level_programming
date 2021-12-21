@@ -3,5 +3,8 @@
 
 
 def class_to_json(obj):
-    """returns a json representation of the obj object"""
+    """returns a json representation of the obj object
+    Args:
+        obj: object
+    """
     return obj.__dict__
