@@ -7,4 +7,4 @@ def lookup(obj):
     Args:
         obj: List to return
     """
-    return "{}".format(dir(obj))
+    return dir(obj)
