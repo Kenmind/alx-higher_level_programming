@@ -5,6 +5,24 @@ Test Cases for BaseGeometry
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
+Checking module docstrings:
+         >>> m = __import__("7-base_geometry").__doc__
+         >>> len(m) > 1
+         True
+
+Checking class docstrings:
+         >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+         >>> len(c) > 1
+         True
+
+Checking method docstrings:
+	 >>> mod1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	 >>> len(mod1) > 1
+	 True
+	 >>> mod2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+         >>> len(mod2) > 1
+         True
+
 # name = string, value = None
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("name", None)
