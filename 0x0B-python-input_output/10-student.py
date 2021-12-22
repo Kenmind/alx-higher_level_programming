@@ -12,12 +12,12 @@ class Student:
 
     def to_json(self, attrs=None):
         """returns a json representatiion of the object"""
-        obj_dict = self.__dict__
-        if not attrs:
-            return obj_dict
-        else:
-            alt_dict = {}
-            for i in attrs:
-                if hasattr(self, i):
-                    alt_dict[i] = obj_dict[i]
-            return alt_dict
+        if attrs is None:
+            return self.__dict__
+        alt_dict = {}
+        for i in attrs:
+            try:
+                alt_dict[i] = self.__dict__[i]
+            except:
+                pass
+        return alt_dict
