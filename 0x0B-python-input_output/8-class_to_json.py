@@ -1,4 +1,4 @@
-#!/usr/bin/pythhon3
+#!/usr/bin/python3
 """ returns a json representation of an object"""
 
 
