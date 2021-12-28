@@ -136,7 +136,7 @@ class Rectangle(Base):
                                                        self.__width,
                                                        self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates values to attributes using *args"""
         if len(args) > 0:
             for i, j in enumerate(args):
@@ -150,3 +150,15 @@ class Rectangle(Base):
                     self.__x = j
                 if i == 4:
                     self.__y = j
+        elif len(kwargs) > 0:
+            for x, y in kwargs.items():
+                if x == 'id':
+                    self.id = y
+                if x == 'width':
+                    self.__width = y
+                if x == 'height':
+                    self.__height = y
+                if x == 'x':
+                    self.__x = y
+                if x == 'y':
+                    self.__y = y
