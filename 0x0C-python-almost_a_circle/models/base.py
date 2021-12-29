@@ -43,3 +43,16 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return list()
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all attrs already set"""
+        a = None
+        if cls.__name__ == "Square":
+            a = cls(1)
+        elif cls.__name__ == "Rectangle":
+            a = cls(1, 1)
+        cls.update(a, **dictionary)
+        return a
+    @classmethod
+    def load_from_file(cls):
