@@ -35,3 +35,11 @@ class Base:
                 js_str = Base.to_json_string(js_list)
         with open(cls.__name__ + '.json', 'w') as n:
             n.write(js_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of JSON string
+        representation of json_string"""
+        if json_string is None or len(json_string) == 0:
+            return list()
+        return json.loads(json_string)
