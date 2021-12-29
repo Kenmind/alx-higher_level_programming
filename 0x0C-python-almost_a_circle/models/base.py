@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Defines the base class"""
 import json
+import csv
+import turtle
 
 
 class Base:
@@ -111,3 +113,50 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw_square(turt, x, y, size):
+        """Draws a square using a turtle object"""
+
+        turt.showturtle()
+        turt.up()
+        turt.goto(x, y)
+        turt.down()
+        turt.goto(x, y)
+        for i in range(4):
+            turt.forward(size)
+            turt.left(90)
+        turt.hideturtle()
+
+    @staticmethod
+    def draw_rect(turt, x, y, width, height):
+        """Draws a rectangle using a turtle object"""
+
+        turt.showturtle()
+        turt.up()
+        turt.goto(x, y)
+        turt.down()
+        turt.goto(x, y)
+        for i in range(2):
+            turt.forward(width)
+            turt.left(90)
+            turt.forward(height)
+            turt.left(90)
+        turt.hideturtle()
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using the turtle module"""
+        turt = turtle.Turtle()
+        turt.screen.bgcolor("green")
+        turt.pensize(2)
+        turt.shape("turtle")
+
+        turt.color("beige")
+        for rect in list_rectangles:
+            Base.draw_rect(turt, rect.x, rect.y, rect.width, rect.height)
+
+        turt.color("blue")
+        for sq in list_squares:
+            Base.draw_square(turt, sq.x, sq.y, sq.size)
+        turtle.exitonclick()
