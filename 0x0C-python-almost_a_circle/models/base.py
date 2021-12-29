@@ -54,5 +54,16 @@ class Base:
             a = cls(1, 1)
         cls.update(a, **dictionary)
         return a
+
     @classmethod
     def load_from_file(cls):
+        """returns a list of instances"""
+        obj_list = []
+        try:
+            with open(cls.__name__ + '.json', 'r', encoding='utf-8') as n:
+                list_output = cls.from_json_string(n.read())
+                for i in list_output:
+                    obj_list.append(cls.create(**i))
+        except Exception:
+            pass
+        return obj_list
