@@ -163,3 +163,10 @@ class Rectangle(Base):
                     self.__x = y
                 if x == 'y':
                     self.__y = y
+
+    def to_dictionary(self):
+        """prints the dictionary representation of rectangle"""
+        obj = {}
+        for i in ['id', 'width', 'height', 'x', 'y']:
+            obj[i] = getattr(self, i)
+        return obj
