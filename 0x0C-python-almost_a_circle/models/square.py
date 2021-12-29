@@ -50,3 +50,10 @@ class Square(Rectangle):
                     self.x = k
                 if j == "y":
                     self.y = k
+
+    def to_dictionary(self):
+        """prints the dictionary representation of the square"""
+        obj = {}
+        for i in ['id', 'size', 'x', 'y']:
+            obj[i] = getattr(self, i)
+        return obj
