@@ -537,7 +537,8 @@ class TestRectangle_update_args(unittest.TestCase):
     def test_update_args_two(self):
         r = Rectangle(10, 10, 10, 10, 10)
         r.update(89, 2)
-        self.assertEqual("[Rectangle] (89) 10/10 - 2/10", str(r))
+        s = str(r)
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/10", s)
 
     def test_update_args_three(self):
         r = Rectangle(10, 10, 10, 10, 10)
