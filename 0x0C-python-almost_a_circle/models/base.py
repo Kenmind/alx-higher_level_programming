@@ -116,3 +116,34 @@ class Base:
         for sq in list_squares:
             Base.draw_square(turt, sq.x, sq.y, sq.size)
         turtle.exitonclick()
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes to file.csv"""
+        with open(cls.__name__ + '.csv', 'w', newline="") as csvfile:
+            if list_objs is None or list_objs == []:
+                csvfile.write('[]')
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ['id', 'width', 'height', 'x', 'y']
+                else:
+                    fieldnames = ['id', 'size', 'x', 'y']
+                write = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                for i in list_objs:
+                    write.writerow(i.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """loads data from file.csv"""
+        try:
+            with open(cls.__name__ + '.csv', 'r', newline='') as csvfile:
+                if cls.__name__ == 'Rectangle':
+                    fieldnames = ['id', 'width', 'height', 'x', 'y']
+                else:
+                    fieldnames = ['id', 'size', 'x', 'y']
+                list_dict = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dict = [dict([i, int(j)] for i, j in k.items())
+                             for k in list_dict]
+                return [cls.create(**k) for k in list_dict]
+        except IOError:
+            return []
