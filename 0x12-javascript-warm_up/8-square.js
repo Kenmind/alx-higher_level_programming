@@ -2,7 +2,7 @@
 const args = process.argv[2];
 let i;
 let j = 0;
-let r = ' ';
+let r = '';
 if (isNaN(args)) {
   console.log('Missing size');
 } else {
