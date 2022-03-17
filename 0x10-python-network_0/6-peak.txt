@@ -1,2 +1,1 @@
-# Complexity of find a peak
-O(n)
+O(log(n))
