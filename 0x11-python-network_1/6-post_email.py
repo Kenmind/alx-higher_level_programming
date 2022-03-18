@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Sends a POST request and displays the body of the response
+"""
+    Sends a POST request and displays the body of the response
+"""
 import requests
 import sys
 
