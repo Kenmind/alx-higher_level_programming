@@ -7,7 +7,7 @@ import sys
 
 
 if __name__ == "__main__":
-    email = sys.argv[2]
+    email = {"email:"sys.argv[2]}
     url = sys.argv[1]
-    post = requests.post(url, {"email:" email})
+    post = requests.post(url, {"email:" data=email})
     print(post.text)
